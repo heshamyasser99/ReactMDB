@@ -7,7 +7,7 @@
 
 /* Typography */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fff;
   background-color: #121212;
 }
@@ -53,10 +53,11 @@ body {
 }
 
 /* Movies Grid Styles */
-.movies-grid, .watchlist {
+.movies-grid,
+.watchlist {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
-  gap: 2rem 2rem;  
+  gap: 2rem 2rem;
   padding: 1rem;
   justify-content: center;
 }
@@ -67,7 +68,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .movie-card:hover {
@@ -98,7 +99,7 @@ body {
 .movie-card-rating {
   font-size: 0.9rem;
   font-weight: bold;
-  background:#141414;
+  background: #141414;
   padding: 3px 10px;
   margin: 0 auto;
   width: 50px;
@@ -113,7 +114,7 @@ body {
 /* Watchlist Button Styles */
 .watchlist-btn {
   border: none;
-  background: #2196F3;
+  background: #2196f3;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -121,7 +122,6 @@ body {
   cursor: pointer;
   transition: background-color 0.2s;
 }
-
 
 /* Footer Styles */
 .footer {
@@ -173,7 +173,7 @@ nav {
 
 ul {
   list-style-type: none;
-  margin: 0;  
+  margin: 0;
   display: flex;
   justify-content: center;
 }
@@ -183,16 +183,16 @@ ul li {
 }
 
 nav a {
-  color:black;
+  color: black;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 50px;
   background-color: #ffffff;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 nav a:hover {
-  background-color: #E7F2F1;
+  background-color: #e7f2f1;
   color: black;
 }
 
@@ -218,7 +218,7 @@ nav a:hover {
   right: 0;
   bottom: 0;
   background-color: #141414;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -230,16 +230,63 @@ nav a:hover {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 .slider-label {
-  color: #fff; 
-  font-size: 12px; 
-  width: 100%; 
-  line-height: 24px; 
-  transition: opacity 0.4s ease; 
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  line-height: 24px;
+  transition: opacity 0.4s ease;
+}
+
+.watchlist-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.empty-watchlist-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8),
+    rgba(220, 220, 220, 0.6)
+  );
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 2px solid #ddd;
+}
+
+.empty-watchlist-message h1 {
+  font-size: 2em;
+  color: #333;
+  margin: 0;
+}
+
+.empty-watchlist-message p {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.empty-watchlist-message::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px; /* Adjust height as needed */
+  background: url("https://cdn.iconscout.com/icon/free/png-512/free-watchlist-1891138-1598051.png?f=webp&w=256")
+    no-repeat center center;
+  background-size: cover;
+  margin-bottom: 20px;
 }
 
 input:checked + .slider:before {
@@ -247,5 +294,5 @@ input:checked + .slider:before {
 }
 
 input:checked + .slider {
-  background-color: #FFA100;
+  background-color: #ffa100;
 }
